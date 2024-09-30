@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IndiCab</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <!-- NAVBAR -->
+    <header>
+      <div class="navbar">
+        <a href="#" class="logo">
+          <h1 class="logo-text">IndiCab</h1>
+        </a>
+        <div class="links">
+          <a href="#Home" class="nav-links">Home</a>
+          <a href="#About-Us" class="nav-links">About Us</a>
+          <a href="#Contact us" class="nav-links">Contact Us</a>
+          <a href="#Blogs" class="nav-links">Blogs</a>
+        </div>
+        <div class="btn">
+          <button class="signUp-btn">Sign Up</button>
+          <button class="logIn-btn">Log In</button>
+        </div>
+        <div class="toggle-btn">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+      </div>
+      <!-- Navbar Dropdown Menu -->
+      <div class="dropdown-menu">
+        <a href="#Home" class="dd-nav-links">Home</a>
+        <a href="#About-Us" class="dd-nav-links">About Us</a>
+        <a href="#Contact us" class="dd-nav-links">Contact Us</a>
+        <a href="#Blogs" class="dd-nav-links">Blogs</a>
+        <div class="dd-btn">
+            <button class="dd-signUp-btn">Sign Up</button>
+            <button class="dd-logIn-btn">Log In</button>
+        </div>
+      </div>
+    </header>
+
+    <!-- HERO-SECTION -->
+    <section class="hero-section">
+        <div class="left-container">
+            <h1>Reliable Rides at Your Fingertips</h1>
+            <p>Looking for a quick, reliable rides in Bihar? Our cab service offers safe, comfortable transportation anytime. Book now for fast, convenient trips to your destination, whether it’s business, errands, or leisure!</p>
+            <form class="booking-form">
+                <div class="form-group">
+                    <label for="location">Pick-up Location:</label>
+                    <input type="text" id="location" name="location" placeholder="Enter your location">
+                </div>
+                <div class="form-group">
+                    <label for="destination">Destination:</label>
+                    <input type="text" id="destination" name="destination" placeholder="Enter your destination">
+                </div>
+                <button type="submit" class="book-btn">Book Now</button>
+            </form>
+        </div>
+        <div class="right-container">
+            <img src="Assets/cab.png" alt="Cab Image" class="cab-image">
+        </div>
+    </section>
+    
+    <!-- Main section for services and details -->
+        <section class="services-section">
+          <h1>Taxi services in Bihar with IndiCab</h1>
+          <p class="para">Welcome to the ride option that’s ready when you are. You can request a ride when you need to travel near or far in Patna. You’ll also enjoy 24x7 requesting, helpful in-app safety features, and upfront pricing to budget ahead for your trip. Try this day-or-night ride option to head to your destination.</p>
+          
+          <!-- Services cards -->
+          <div class="services-container">
+              <div class="service-card">
+                  <span class="service-icon">🚖</span>
+                  <h3>24x7 requesting</h3>
+                  <p>Experience taxi-like services and more in Bihar by requesting a ride with the IndiCab app. With IndiCab, you can request a ride on demand at any time and on any day.</p>
+              </div>
+              <div class="service-card">
+                  <span class="service-icon">🛡️</span>
+                  <h3>Helpful safety features</h3>
+                  <p>IndiCab prioritizes safety for every rider in Bihar. In a few taps, you can access customer support and share trip details with loved ones. View driver profiles, too, to see ratings and more to get to know your driver before the trip begins.</p>
+              </div>
+              <div class="service-card">
+                  <span class="service-icon">💰</span>
+                  <h3>Upfront price estimates</h3>
+                  <p>Skip the hassle of bargaining for a taxi by riding with IndiCab. You can view upfront price estimates at the beginning of every ride.</p>
+              </div>
+          </div>
+      </section>
+  
+      <!-- App download section -->
+      <section class="download-section">
+          <h2>Get the IndiCab app to request a ride</h2>
+          <div class="download-buttons">
+              <a href="#" class="download-btn app-store">Download on the App Store</a>
+              <a href="#" class="download-btn google-play">Download on Google Play</a>
+          </div>
+      </section>
+    
+      <!-- Footer Section -->
+        <footer class="footer">
+          <div class="footer-content">
+              <!-- Logo and social icons section -->
+              <div class="footer-brand">
+                <a href="#" class="logo">
+                  <h1 class="logo-text">IndiCab</h1>
+                </a>
+                  <div class="social-icons">
+                      <a href=""><img src="Assets/instagram.png" alt="Instagram Logo"></a>
+                      <a href=""><img src="Assets/youtube.png" alt="YouTube Logo"></a>
+                      <a href=""><img src="Assets/twitter.png" alt="Twitter Logo"></a>
+                  </div>
+              </div>
+              <!-- Links Section -->
+              <div class="footer-links">
+                  <div class="link-group">
+                      <a href="#">Book a cab</a>
+                      <a href="#">Drive with us</a>
+                      <a href="#">Outstation</a>
+                      <a href="#">Rental</a>
+                      <a href="#">Corporate</a>
+                  </div>
+                  <div class="link-group">
+                      <a href="#">About Us</a>
+                      <a href="#">Contact Us</a>
+                      <a href="#">Support</a>
+                      <a href="#">Careers</a>
+                      <a href="#">Media Centre</a>
+                  </div>
+              </div>
+          </div>
+          <!-- Footer bottom section -->
+          <div class="footer-bottom">
+              <p>Copyright © 2024 IndiCab Pvt Ltd. All Rights Reserved.</p>
+              <p>Made With ❤️ By Vikram Kumar</p>
+              <div class="footer-bottom-links">
+                  <a href="#">Notices</a>
+                  <a href="#">Privacy Policy</a>
+                  <a href="#">Terms of Service</a>
+              </div>
+          </div>
+      </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

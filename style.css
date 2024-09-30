@@ -1,0 +1,540 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: Arial, sans-serif;              
+}
+
+                                        /* NAVBAR */
+.navbar{
+    width: 100%;
+    height: 70px;
+    padding: 0px 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: black;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;
+}
+.logo{
+    color: #ffd500;
+}
+.links{
+    display:flex;
+    gap: 50px;
+}
+.nav-links{
+    color: white;
+    font-size: 20px;
+    font-weight: 500;
+    transform: color 0.1s;
+    padding: 8px 10px;
+    border-radius: 5px;
+}
+.nav-links:hover{
+    color: rgb(0, 0, 0);
+    background-color: #eaff00;
+}
+.btn{
+    display: flex;
+    background-color: white;
+    border-radius: 20px;
+}
+.logIn-btn,.signUp-btn{
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 700; 
+}
+.logIn-btn{
+    padding: 12px 16px;
+    background-color: white;
+    color: black;
+    border-radius: 0px 10px 5px 0px; 
+}
+.btn:hover,.logIn-btn:hover{
+    background-color:#eaff00;
+    color: black;
+}
+.signUp-btn{
+    padding: 12px 18px;
+    color: white;
+    background-color: #1267b8;
+    border-radius: 5px 0px 20px 10px; 
+}
+.toggle-btn{
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+    display: none;
+}
+                                    /* Dropdown Menu Starts Here*/
+.dropdown-menu{
+    display: none;
+    position: absolute;
+    right: 25px;
+    top: 100px;
+    height: 0;
+    width: 300px;
+    background: rgba(36, 228, 222, 0.167);
+    backdrop-filter: blur(15px);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: height 0.2s cubic-bezier (0.175, 0.885, 0.32, 1.275);
+}
+.dropdown-menu.open{
+    height: unset;
+    /* height: 380px; */
+}
+.dd-nav-links{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: 10px 0px;
+    padding: 12px;
+    color: black;
+    font-size: 20px;
+    font-weight: 500;
+    transform: color 0.1s;
+    /* border-radius: 10px; */
+}
+.dd-nav-links:hover{
+    color: rgb(0, 0, 0);
+    background-color: #eaff00;
+}
+.dd-btn{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    gap: 10px;
+}
+.dd-signUp-btn, .dd-logIn-btn{
+    padding: 15px;
+    margin: 0px 20px;
+    font-size: 20px; 
+    font-weight: 600;
+    border: none;
+    border-radius: 65px;
+    cursor: pointer;
+}
+.dd-logIn-btn{
+    background-color: #ffffff;
+    color: black;
+    margin-bottom: 10px;
+}
+.dd-logIn-btn:hover{
+    background-color:#eaff00;
+    border: 2px solid black;
+    color: black;
+}
+.dd-signUp-btn{
+    color: white;
+    background-color: #1267b8;
+}
+.dd-signUp-btn:hover{
+    background-color:#2988e1;
+    border: 3px solid #eaff00;
+}
+                                    /* Dropdown Menu Ends Here*/
+
+            /* Navbar Media Query */
+@media ( max-width:980px ){
+    .links, .btn{
+        display: none;
+    }
+    .toggle-btn, .dropdown-menu{
+        display: block;
+    }
+}
+@media (max-width: 426px) {
+    .dropdown-menu {
+        left: 32px;
+        width: unset;
+    }
+    .navbar{
+        padding: 0px 35px;
+    }
+}
+
+                                        /* HERO SECTION */
+.hero-section {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 70px;
+    background: url(Assets/hero-bg.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    flex-wrap: wrap; /* It allow wrapping of containers on smaller screens */
+}
+.left-container {
+    flex: 1;
+}
+.left-container h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    color: #1267b8;
+}
+.left-container p {
+    font-size: 20px;
+    margin-bottom: 30px;
+    color: #666;
+}
+.booking-form {
+    display: flex;
+    flex-direction: column;
+}
+.form-group {
+    margin-bottom: 20px;
+}
+.form-group label {
+    font-size: 16px;
+    color: #2c2c2c;
+    margin-bottom: 5px;
+    display: block;
+}
+.form-group input {
+    width: 50%;
+    padding: 15px;
+    padding-left: 30px;
+    font-size: 16px;
+    border: 1px solid #1267b8;
+    border-radius: 5px;
+}
+input::placeholder {
+    color: #1267b8;
+}
+.book-btn {
+    padding: 15px 30px;
+    font-size: 20px;
+    color: #fff;
+    background-color: #000000;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 50%;
+}
+.book-btn:hover {
+    background-color: #e64a19;
+}
+.right-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 300px; /* It ensures image container has enough height on smaller screens */
+}
+.cab-image {
+    width: 80%;
+    height: auto;
+    object-fit: contain;
+}
+            /* Hero Section Media Query */
+@media (max-width: 1024px) {
+    .form-group input {
+        width: 80%;
+    }
+    .book-btn {
+        width: 80%;
+    }
+    .cab-image {
+        width: 100%;
+    }
+}
+@media (max-width: 768px) {
+    .hero-section {
+        flex-direction: column-reverse;
+        height: auto; /* Adjusted to remove fixed height, preventing image clipping */
+    }
+    .left-container h1 {
+        font-size: 40px;
+        text-align: center;
+    }
+    .left-container p{
+        text-align: center;
+    }
+    .form-group input {
+        width: 100%;
+    }
+    .book-btn {
+        width: 100%;
+    }
+    .right-container {
+        width: 100%; /* It ensures that right container takes full width in smaller screens */
+        margin-bottom: 20px; /* It provides space below image */
+    }
+    .cab-image {
+        width: 100%;
+        max-height: 400px; /* It ensures image does not exceed a reasonable height on small screens */
+    }
+}
+@media (min-width: 769px) and (max-width: 908px) {
+    .hero-section {
+        height: auto;
+        padding: 50px; 
+    }
+    .form-group input {
+        width: 70%; 
+    }
+    .book-btn {
+        width: 70%; 
+    }
+    .right-container {
+        width: 100%; 
+    }
+    .cab-image {
+        width: 90%;
+    }
+}
+@media (max-width: 426px) {
+    .hero-section {
+        padding: 35px;
+    }
+}
+@media (max-width: 320px) {
+    .left-container h1 {
+        font-size: 30px;
+        text-align: center;
+    }
+    .left-container p{
+        font-size: 15px;
+        text-align: center;
+    }
+    .cab-image {
+        width: 100%;
+    }
+}
+
+                                        /* services and details section */
+.services-section {
+    color: #333;
+    line-height: 1.6;
+}
+.services-section h1, .download-section h2{
+    color: #000;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Main services section */
+.services-section {
+    padding: 70px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+/* Container for service cards */
+.services-container {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 40px;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* Individual service card */
+.service-card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 300px;
+    text-align: center;
+}
+.service-icon {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+.service-card h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+.service-card p {
+    font-size: 16px;
+    color: #666;
+}
+
+/* App download section */
+.download-section {
+    padding: 80px 20px;
+    background-color: #efefef;
+    text-align: center;
+}
+.download-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+.download-btn {
+    padding: 15px 25px;
+    background-color: #000;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+}
+.download-btn:hover {
+    background-color: #444;
+}
+
+                     /* Service and Details Section Media Query */
+
+/* Tablet screen adjustments */
+@media (max-width: 768px) {
+    .services-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .service-card {
+        max-width: 80%;
+    }
+    .download-section {
+        padding: 80px 70px;
+    }
+}
+
+/* Small screens and mobile */
+@media (max-width: 480px) {
+    .services-section {
+        padding: 35px;
+    }    
+    .service-card {
+        max-width: 100%;
+    }
+    .download-section {
+        padding: 35px;
+    }
+    .download-buttons {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+    .download-btn {
+        width: 80%;
+    }
+}
+
+                                        /* Footer Section */
+.footer {
+    /* background-color: #f4f6f8; */
+    background-color: #000000;
+    padding: 120px 20px 30px 20px;
+    /* color: #333; */
+    color: #ffffff;
+}
+
+/* Footer content container */
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 0px 50px 50px 50px;
+    border-bottom: 1px solid #7f7f7f;
+}
+
+/* Logo and social media icons section */
+.footer-brand h2 {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+.social-icons {
+    display: flex;
+    gap: 15px;
+    padding-top: 10px
+}
+.social-icons img {
+    width: 26px;
+    height: 26px;
+}
+
+/* Footer links container */
+.footer-links {
+    display: flex;
+    justify-content: space-between;
+    gap: 350px;
+    flex-wrap: wrap;
+}
+
+/* Link group styling */
+.link-group {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.link-group a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 16px;
+}
+.link-group a:hover {
+    color: #0073e6;
+}
+
+/* Footer bottom section */
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    flex-wrap: wrap;
+    padding: 10px 40px 0px 40px;
+}
+.footer-bottom p {
+    font-size: 14px;
+    color: #888;
+}
+.footer-bottom-links {
+    display: flex;
+    gap: 20px;
+}
+.footer-bottom-links a {
+    text-decoration: none;
+    font-size: 14px;
+    color: #555;
+}
+.footer-bottom-links a:hover {
+    color: #0073e6;
+}
+
+                                /* Footer Section Media Query */
+/* Tablet screens */
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+    }
+    .footer-links {
+        justify-content: center;
+    }
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+/* Mobile screens */
+@media (max-width: 480px) {
+    .social-icons {
+        padding-bottom: 35px
+    }
+    .footer-links {
+        flex-direction: column;
+        gap: 100px;
+        align-items: center;
+    }
+    .footer-bottom-links {
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 10px;
+    }
+    .footer-bottom {
+        text-align: center;
+    }
+}
